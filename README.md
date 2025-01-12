@@ -3,7 +3,7 @@
 
 ## Introduction
 
-The **UQMJ Scoreboard** is a web-based application designed to track and manage player scores for Hong Kong-style Mahjong tournaments. It provides a user-friendly interface for administrators to update scores while allowing the public to view the scoreboard in real-time. This system is built to enhance the efficiency and transparency of scorekeeping in Mahjong games.
+The **UQMJ Scoreboard** is a web-based application designed to track and manage player scores for UQ Mahjong society's Hong Kong-style Mahjong tournaments and sessions. It provides a user-friendly interface for administrators to update scores while allowing the public to view the scoreboard in real-time. This system is built to enhance the efficiency and transparency of scorekeeping in Mahjong games.
 
 ---
 
