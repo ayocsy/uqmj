@@ -1,6 +1,7 @@
 # uqmj
 
-![Uploading Club logo.jpg…]()
+![Club logo](https://github.com/user-attachments/assets/9ec86c86-3fd8-4c28-91e6-218986571170)
+
 
 ## Introduction
 
