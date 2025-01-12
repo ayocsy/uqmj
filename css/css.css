@@ -1,0 +1,262 @@
+/* Minimal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Optional Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* -------------------- */
+/* NAVIGATION BAR STYLES */
+/* -------------------- */
+nav {
+  background-color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;            /* We use flex to align items horizontally */
+  align-items: center;      /* Vertically center items */
+  justify-content: space-between; 
+  padding: 0.5rem 1rem;
+}
+
+/* BRAND / TITLE IN THE CENTER */
+nav .brand {
+  flex: 1;
+  text-align: left;       /* Center the brand text */
+  justify-content: flex-start;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+}
+
+/* NAV LINKS ON THE SAME ROW */
+nav .nav-links {
+  flex: 1;                  /* they share space with brand */
+  display: flex;
+  justify-content: flex-end;/* push links to the right side on the same row */
+  gap: 1rem;
+}
+
+nav .nav-links ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav .nav-links li {
+  display: inline-block;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+nav .nav-links a:hover {
+  background-color: #555;
+}
+
+/* Example if you want the brand on the left and links center:
+   - Then: justify-content: center; for .nav-links
+   - And brand { text-align: left; }
+*/
+
+/* --------------- */
+/* HEADING STYLES  */
+/* --------------- */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin: 2rem 0 1rem 0;
+  color: #111;
+  text-align: center;   /* Center the H1 on the page */
+}
+
+/* --------------- */
+/* TABLE STYLES    */
+/* --------------- */
+table {
+  width: 80%;
+  max-width: 900px;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+th {
+  background-color: #f7f7f7;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+td {
+  font-size: 0.95rem;
+  color: #333;
+}
+th.rank, td.rank {
+  width: 60px;
+  text-align: center;
+}
+th.score, td.score {
+  width: 80px;
+  text-align: center;
+}
+
+/* --------------- */
+/* BUTTON STYLES   */
+/* --------------- */
+button,
+input[type="submit"],
+input[type="button"] {
+  background-color: #4CAF50;         /* Fancy green or pick your color */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;               /* Rounded, pill-like shape */
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  margin: 0.3rem;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #45a049;         /* slightly darker green */
+  transform: translateY(-2px);       /* lift effect on hover */
+}
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  transform: translateY(0);          /* reset on click */
+  box-shadow: none;
+}
+
+/* STAFF BUTTONS CENTERED */
+.staff-buttons {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* --------------- */
+/* POPUP (MODAL)   */
+/* --------------- */
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.popupcontent {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.popupcontent h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+input[type="text"], 
+input[type="number"], 
+input[type="password"],
+select {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+ /* 9. Centered Login Container */
+ .login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 3rem auto;  /* center horizontally and some spacing from top */
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.login-container h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+/* --------------- */
+/* FOOTER STYLES   */
+/* --------------- */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* --------------- */
+/* RESPONSIVE      */
+/* --------------- */
+@media (max-width: 600px) {
+  /* Navigation: stack brand and nav-links if space is small */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .brand, nav .nav-links {
+    flex: none;
+  }
+
+  /* Table shrinks */
+  table {
+    width: 95%;
+  }
+
+  /* Buttons can scale smaller if desired */
+  button, 
+  input[type="submit"],
+  input[type="button"] {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
